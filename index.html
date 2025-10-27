@@ -1,0 +1,2980 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BARZEL - אימון אישי מקצועי וליווי תחרותי. התאמן עם המומחים המובילים לכושר גופני ופיתוח שרירים.">
+    <meta name="keywords" content="אימון אישי, כושר גופני, פיתוח שרירים, מאמן כושר, ליווי תחרותי">
+    <meta name="author" content="BARZEL">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BARZEL - אימון אישי מקצועי">
+    <meta property="og:description" content="אימון אישי מקצועי וליווי תחרותי. התאמן עם המומחים המובילים לכושר גופני ופיתוח שרירים.">
+    <meta property="og:image" content="https://www.your-domain.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.your-domain.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    
+    <!-- Scripts -->
+    <script src="js/cookies.js" defer></script>
+    <script src="js/accessibility.js" defer></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <title>BARZEL | Coached by Barel Klor - ליווי היפרטרופיה מקצועי</title>
+    <meta name="description" content="ליווי היפרטרופיה מקצועי עם אלוף הארץ בפיתוח גוף טבעי, בראל קלור. אימון מבוסס ראיות, תוכנית אישית ותוצאות מוכחות." />
+    <meta property="og:title" content="BARZEL | Coached by Barel Klor - ליווי היפרטרופיה מקצועי" />
+    <meta property="og:description" content="ליווי והדרכת מתאמני כח עם אלוף הארץ בפיתוח גוף טבעי, בראל קלור (WNBF Pro)" />
+    <meta property="og:image" content="assets/images/Barzel-Final-Ver-11.png" />
+    <meta property="og:url" content="https://barzel-coaching.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Assistant:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Set default consent state
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+        });
+
+        // Initialize GA4
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXX', {
+            'anonymize_ip': true,
+            'send_page_view': false
+        });
+    </script>
+    <!-- Calendly widget styles (for popup modal) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <style>
+        /* Accessibility Widget */
+        .accessibility-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--metal-black);
+            border: 1px solid var(--silver);
+            border-radius: 16px;
+            padding: 15px;
+            z-index: 9999;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            font-family: 'Assistant', sans-serif;
+            direction: rtl;
+            min-width: 280px;
+            transform: translateZ(0);
+        }
+
+        .accessibility-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--metal-black);
+            border: 1px solid var(--silver);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--silver);
+            z-index: 10000;
+            transition: all 0.3s ease;
+        }
+
+        .accessibility-toggle:hover {
+            transform: scale(1.1);
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .accessibility-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+        }
+
+        .accessibility-title {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .accessibility-close {
+            background: transparent;
+            border: none;
+            color: var(--silver);
+            cursor: pointer;
+            padding: 5px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .accessibility-close:hover {
+            color: var(--white);
+        }
+
+        .accessibility-options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .accessibility-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .accessibility-switch {
+            position: relative;
+            width: 46px;
+            height: 24px;
+        }
+
+        .accessibility-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .accessibility-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--steel-gray);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .accessibility-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--silver);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .accessibility-slider {
+            background-color: var(--white);
+        }
+
+        input:checked + .accessibility-slider:before {
+            transform: translateX(22px);
+            background-color: var(--metal-black);
+        }
+
+        .accessibility-label {
+            color: var(--silver);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .font-size-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .font-size-btn {
+            background: var(--steel-gray);
+            color: var(--silver);
+            border: none;
+            border-radius: 4px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .font-size-btn:hover {
+            background: var(--white);
+            color: var(--metal-black);
+        }
+
+        /* High Contrast Mode */
+        body.high-contrast {
+            background: #000 !important;
+            color: #fff !important;
+        }
+
+        body.high-contrast * {
+            background-color: #000 !important;
+            color: #fff !important;
+            border-color: #fff !important;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background: #000 !important;
+        }
+
+        body.dark-mode * {
+            background-color: #000 !important;
+        }
+
+        /* Increased Line Height */
+        body.increased-spacing * {
+            line-height: 2 !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        /* Disable Animations */
+        body.no-animations *,
+        body.no-animations *::before,
+        body.no-animations *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(14, 14, 14, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            z-index: 9998;
+            display: none;
+            border-top: 1px solid rgba(183, 183, 183, 0.1);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            color: var(--silver);
+            font-size: 0.9rem;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cookie-accept {
+            background: var(--white);
+            color: var(--metal-black);
+        }
+
+        .cookie-reject {
+            background: transparent;
+            color: var(--silver);
+            border: 1px solid var(--silver);
+        }
+
+        .cookie-settings {
+            background: transparent;
+            color: var(--silver);
+            text-decoration: underline;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-buttons {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --metal-black: #0E0E0E;
+            --steel-gray: #2C2C2F;
+            --silver: #B7B7B7;
+            --white: #FFFFFF;
+            --iron-blue: #3A4F7A;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--metal-black);
+            color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(14, 14, 14, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(183, 183, 183, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto;
+            max-width: 180px;
+        }
+
+        .logo-design {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-main {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--white);
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--silver) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-accent {
+            color: var(--silver);
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .logo-subtitle {
+            font-size: 10px;
+            color: var(--silver);
+            font-weight: 400;
+            margin-top: -3px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--silver);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--white);
+        }
+
+        .cta-btn-small {
+            background: var(--white);
+            color: var(--metal-black);
+            padding: 8px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* Navbar muscle icon */
+        .nav-muscle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff9e6 0%, #ffd966 40%, #b88f2f 100%);
+            box-shadow: 0 6px 18px rgba(184,143,47,0.12), 0 2px 0 rgba(255,255,255,0.06) inset;
+            font-size: 1.2rem;
+            margin-left: 6px;
+            margin-right: 6px;
+            cursor: default;
+            transform-origin: center center;
+            animation: musclePulse 2.6s ease-in-out infinite;
+        }
+
+        .nav-muscle:focus, .nav-muscle:hover {
+            transform: scale(1.06) rotate(-3deg);
+            box-shadow: 0 10px 30px rgba(184,143,47,0.18);
+        }
+
+        @keyframes musclePulse {
+            0% { transform: scale(1) rotate(0deg); }
+            30% { transform: scale(1.06) rotate(-2deg); }
+            60% { transform: scale(0.98) rotate(1deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .nav-muscle { animation: none !important; transition: none !important; }
+        }
+
+        /* Premium reveal on scroll */
+        .premium-animate {
+            opacity: 0;
+            transform: translateY(18px) scale(0.995);
+            filter: blur(6px) saturate(0.95);
+            transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 650ms cubic-bezier(.2,.9,.2,1), filter 650ms ease;
+            will-change: opacity, transform;
+        }
+
+        .premium-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: none;
+        }
+
+        /* Optional subtle scale-up for featured elements */
+        .premium-animate.premium-pop.is-visible {
+            transform: translateY(0) scale(1.018);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .premium-animate, .premium-animate.is-visible { transition: none !important; transform: none !important; opacity: 1 !important; filter: none !important; }
+        }
+
+        .cta-btn-small:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--metal-black) 0%, #1a1a1a 100%);
+        }
+
+        .hero-title {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--silver) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--silver);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--metal-black);
+            padding: 15px 35px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--silver);
+            padding: 15px 35px;
+            border: 2px solid var(--silver);
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--silver);
+            color: var(--metal-black);
+            transform: translateY(-3px);
+        }
+
+        .hero-note {
+            color: var(--silver);
+            font-size: 0.9rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            position: relative;
+            background-image: url('assets/images/NC1_0363.jpg');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            overflow: hidden;
+
+            /* dark overlay */
+            background-color: rgba(0,0,0,0.6);
+            background-blend-mode: multiply;
+            color: var(--white);
+        }
+
+        /* Medium screens */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .about {
+                background-size: 100%;
+                background-position: top center;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1201px) {
+            .about {
+                background-size: 100%;
+                background-position: center;
+            }
+        }
+
+        .about-content {
+            display: grid;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* keep content above the gradient overlay */
+        }
+
+        .about-text-container {
+            background: rgba(14, 14, 14, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile tweaks for About: ensure background image and gallery are visible and align with text */
+        @media (max-width: 768px) {
+            .about {
+                background-size: cover;
+                background-position: center;
+                padding: 40px 0;
+                position: relative;
+                min-height: auto;
+            }
+            
+            .about-content {
+                width: 100%;
+                padding: 20px;
+                position: relative;
+                z-index: 2;
+                margin-top: 0;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 16px;
+            }
+
+            .about-text-container {
+                background: transparent;
+                backdrop-filter: none;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            /* Enhanced overlay for better text readability on mobile */
+            .about::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            .about-content {
+                gap: 28px;
+            }
+
+            .image-gallery {
+                height: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 180px;
+            }
+
+            /* Ensure gallery images fully cover their boxes on small screens */
+            .gallery-image { background: transparent; }
+            .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            height: 400px;
+        }
+
+        .gallery-image {
+            background: var(--steel-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--silver);
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+            background: var(--metal-black);
+        }
+
+        .gallery-image:first-child {
+            grid-row: 1 / 3;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-image:nth-child(2) img,
+        .gallery-image:nth-child(3) img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .about-text h2 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            /* on wide screens align to the right for Hebrew readability */
+            text-align: right;
+            letter-spacing: 0.5px;
+        }
+
+        /* Better typographic layout for the about copy */
+        .about-text {
+            display: block;
+            max-width: 760px; /* limit line length for readability */
+            margin: 0 auto;
+            padding: 10px 8px;
+            text-align: right; /* Hebrew reads RTL: align right on desktop */
+        }
+
+        .about-text p,
+        .about-description {
+            font-size: 1.06rem;
+            color: var(--silver);
+            margin: 0 0 18px 0;
+            line-height: 1.9; /* airy leading improves readability */
+            hyphens: auto;
+        }
+
+        /* Make the headings and text centered on smaller screens for a cleaner look */
+        @media (max-width: 768px) {
+            .about-text {
+                text-align: center;
+                max-width: 100%;
+                padding: 0 6px;
+            }
+            .about-text h2 { text-align: center; }
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--white);
+        }
+
+        .features-list li::before {
+            content: "◆";
+            color: var(--silver);
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        /* Process Selection Section */
+        .process-selection {
+            padding: 80px 0;
+            background: var(--metal-black);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .process-card {
+            background: var(--steel-gray);
+            padding: 40px 30px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--silver);
+        }
+
+        .process-card h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .process-subtitle {
+            color: var(--silver);
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .process-features {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .process-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--white);
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        .process-features li::before {
+            content: "•";
+            color: var(--silver);
+            font-weight: bold;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .process-btn {
+            background: var(--white);
+            color: var(--metal-black);
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            align-self: center;
+        }
+
+        .process-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--metal-black) 0%, #1A1A1A 100%);
+        }
+
+        .section-title {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 3.2rem;
+            text-align: center;
+            margin-bottom: 80px;
+            letter-spacing: 1px;
+            /* Gold animated gradient + subtle glow */
+            background: linear-gradient(90deg, #b88f2f 0%, #ffd966 25%, #f9f0c1 50%, #ffd966 75%, #b88f2f 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 6px 18px rgba(216, 178, 54, 0.06);
+            animation: goldShift 4s linear infinite, goldGlow 3.6s ease-in-out infinite;
+        }
+
+        /* animated gold gradient movement */
+        @keyframes goldShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* subtle pulsing glow to give depth */
+        @keyframes goldGlow {
+            0% { text-shadow: 0 6px 10px rgba(216,178,54,0.04); }
+            50% { text-shadow: 0 10px 30px rgba(216,178,54,0.12); }
+            100% { text-shadow: 0 6px 10px rgba(216,178,54,0.04); }
+        }
+
+        /* respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .section-title {
+                animation: none !important;
+                background-size: auto;
+                -webkit-text-fill-color: unset;
+                color: var(--silver);
+                text-shadow: 0 4px 15px rgba(183, 183, 183, 0.3);
+            }
+        }
+
+        /* Premium movement utilities */
+        .premium-move {
+            will-change: transform;
+            transform-origin: center center;
+            animation: premiumFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes premiumFloat {
+            0% { transform: translateY(0) rotateX(0) rotateY(0); }
+            50% { transform: translateY(-6px) rotateX(0.6deg) rotateY(-0.6deg); }
+            100% { transform: translateY(0) rotateX(0) rotateY(0); }
+        }
+
+        /* Subtle moving highlight (shine) that sweeps across the element */
+        .premium-shine {
+            position: relative;
+            overflow: visible;
+        }
+        .premium-shine::after {
+            content: '';
+            position: absolute;
+            top: -30%; left: -60%;
+            width: 220%; height: 160%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.08) 45%, rgba(255,255,255,0.00) 60%);
+            transform: skewX(-20deg) translateX(-100%);
+            pointer-events: none;
+            filter: blur(10px);
+            transition: opacity 0.4s ease;
+            opacity: 0.9;
+            animation: premiumShine 3.2s linear infinite;
+            mix-blend-mode: screen;
+        }
+
+        @keyframes premiumShine {
+            0% { transform: skewX(-20deg) translateX(-100%); opacity: 0; }
+            10% { opacity: 0.7; }
+            50% { transform: skewX(-20deg) translateX(0%); opacity: 0.85; }
+            90% { opacity: 0.3; }
+            100% { transform: skewX(-20deg) translateX(100%); opacity: 0; }
+        }
+
+        /* Interactive parallax effect: add class premium-parallax and data-depth optionally */
+        .premium-parallax {
+            transform-style: preserve-3d;
+            transition: transform 0.12s ease-out;
+            will-change: transform;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .premium-move, .premium-shine, .premium-parallax { animation: none !important; transition: none !important; }
+            .premium-shine::after { display: none; }
+        }
+
+        /* Premium section separators: subtle gold divider between sections */
+        /* Ensure sections are positioned so pseudo-elements are placed correctly */
+        section { position: relative; }
+
+        section:not(:last-of-type)::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 72%;
+            height: 1px;
+            bottom: 0; /* sits at the visual end of the section */
+            background: linear-gradient(90deg, transparent 0%, rgba(216,178,54,0.16) 40%, rgba(216,178,54,0.24) 50%, rgba(216,178,54,0.16) 60%, transparent 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Decorative gold node centered on the divider for a premium touch */
+        section:not(:last-of-type)::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff9e6 0%, #ffd966 35%, #b88f2f 100%);
+            box-shadow: 0 6px 20px rgba(184,143,47,0.12), 0 1px 0 rgba(255,255,255,0.06) inset;
+            z-index: 6;
+            pointer-events: none;
+        }
+
+        /* Tighter separators on mobile */
+        @media (max-width: 768px) {
+            section:not(:last-of-type)::after { width: 88%; }
+            section:not(:last-of-type)::before { bottom: -8px; width: 10px; height: 10px; }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 35px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #2C2C2F;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 220px;
+        }
+
+        .feature-card:hover {
+            background: #353538;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--silver);
+            filter: drop-shadow(0 2px 8px rgba(183, 183, 183, 0.2));
+        }
+
+        .feature-card h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .feature-card p {
+            color: var(--white);
+            line-height: 1.5;
+            font-size: 1rem;
+            font-family: 'Assistant', sans-serif;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+
+
+        /* Results Section */
+        .results {
+            padding: 80px 0;
+            background: var(--metal-black);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .results-subtitle {
+            text-align: center;
+            color: var(--silver);
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .result-card {
+            background: #2C2C2F;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            background: #353538;
+        }
+
+        .result-image {
+            background: var(--steel-gray);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--silver);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .insight-card .result-image {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2F 100%);
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .insight-icon {
+            font-size: 3rem;
+            color: var(--silver);
+        }
+
+        .insight-text {
+            text-align: center;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .result-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-content h4 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            line-height: 1.4;
+        }
+
+        .result-description {
+            color: var(--white);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-family: 'Assistant', sans-serif;
+            font-size: 1rem;
+        }
+
+        .result-stats {
+            margin-bottom: 25px;
+        }
+
+        .stat-item {
+            color: var(--silver);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .result-quote {
+            color: var(--silver);
+            font-style: italic;
+            line-height: 1.6;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(183, 183, 183, 0.1);
+            font-size: 1rem;
+        }
+
+        .coach-quote {
+            border-top: 2px solid var(--silver);
+            padding-top: 25px;
+        }
+
+        .quote-author {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--white);
+            text-align: left;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: var(--steel-gray);
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            color: var(--silver);
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card {
+            background: var(--metal-black);
+            padding: 40px 30px;
+            border-radius: 14px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            /* allow buttons to be pushed to the bottom with margin-top:auto */
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--silver);
+            color: var(--metal-black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pricing-card h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .pricing-price {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .pricing-period {
+            color: var(--silver);
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            /* let features area expand to push the CTA to the bottom */
+            flex: 1 1 auto;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--silver);
+            border-bottom: 1px solid rgba(183, 183, 183, 0.1);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-description {
+            color: var(--silver);
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--silver);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+
+
+        /* Steps Section */
+        .steps-wrap {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .steps-track {
+            position: absolute;
+            left: 30px;
+            top: 80px;
+            bottom: 80px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--silver) 0%, rgba(183, 183, 183, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .step-card {
+            background: var(--metal-black);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .step-badge {
+            position: absolute;
+            left: -45px;
+            top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .badge-num {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            color: var(--metal-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .badge-label {
+            margin-top: 10px;
+            background: var(--steel-gray);
+            color: var(--silver);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .step-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--white);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .step-toggle {
+            background: var(--silver);
+            color: var(--metal-black);
+            border: none;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            padding: 0;
+            box-sizing: border-box;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto; /* prevent stretching inside flex containers */
+            align-self: center;
+        }
+
+        .step-toggle:hover {
+            background: var(--white);
+            transform: scale(1.1);
+        }
+
+        .step-toggle[aria-expanded="true"] {
+            transform: rotate(45deg);
+            background: var(--white);
+        }
+
+        .step-body {
+            color: var(--silver);
+            line-height: 1.7;
+            font-size: 1rem;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .step-body:not([hidden]) {
+            opacity: 1;
+            max-height: 300px;
+            padding-top: 10px;
+        }
+
+        /* New: Premium flex-based step card (reusable) */
+        .step-card--new {
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius: 18px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+        }
+
+        .step-badge--new {
+            flex: 0 0 74px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-num--new {
+            width: 74px;
+            height: 74px;
+            background: var(--white);
+            color: var(--metal-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.45), 0 6px 18px rgba(255,255,255,0.06) inset;
+        }
+
+        .badge-label--new {
+            background: rgba(255,255,255,0.03);
+            color: var(--silver);
+            padding: 6px 12px;
+            border-radius: 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .step-content--new {
+            flex: 1 1 auto;
+        }
+
+        .step-title--new {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--premium-silver);
+            margin: 0 0 6px 0;
+        }
+
+        .step-desc--new {
+            color: var(--silver);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Keep the existing toggle style but align it nicely for the new card */
+        .step-card--new .step-toggle {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+
+        .step-body.open {
+            opacity: 1;
+            max-height: 300px;
+            padding-top: 10px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-metal {
+            background: var(--white);
+            color: var(--metal-black);
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-metal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--silver);
+            padding: 12px 25px;
+            border: 2px solid var(--silver);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-ghost:hover {
+            background: var(--silver);
+            color: var(--metal-black);
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: var(--metal-black);
+        }
+
+        .faq-category {
+            margin-bottom: 50px;
+        }
+
+        .faq-category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--silver);
+        }
+
+        .faq-category-icon {
+            font-size: 2rem;
+        }
+
+        .faq-category h3 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--white);
+            margin: 0;
+        }
+
+        .faq-item {
+            background: var(--steel-gray);
+            margin-bottom: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-question {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #888;
+            transition: all 0.3s ease;
+            line-height: 1.4;
+        }
+
+        .faq-question.active {
+            color: var(--white);
+        }
+
+        .faq-question:hover {
+            color: var(--silver);
+        }
+
+        .faq-question:hover {
+            background: rgba(183, 183, 183, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 30px 30px;
+            color: var(--silver);
+            line-height: 1.8;
+            font-family: 'Assistant', sans-serif;
+            font-size: 1rem;
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease;
+        }
+
+        .faq-answer.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        .faq-answer strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--silver);
+            transition: all 0.3s ease;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(183, 183, 183, 0.1);
+        }
+
+        .faq-icon.active {
+            transform: rotate(45deg);
+            background: var(--silver);
+            color: var(--metal-black);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--metal-black);
+            padding: 60px 0 30px;
+            text-align: center;
+            border-top: 1px solid rgba(183, 183, 183, 0.1);
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            color: var(--silver);
+            max-width: 500px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-contact a {
+            color: var(--silver);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(183, 183, 183, 0.1);
+            padding-top: 20px;
+            color: var(--silver);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                gap: 40px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .footer-contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 200px);
+                height: auto;
+            }
+
+            .gallery-image:first-child {
+                grid-row: 1;
+            }
+
+            /* Steps responsive */
+            .steps-track {
+                display: none;
+            }
+
+            .step-badge {
+                position: static;
+                margin-bottom: 20px;
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .badge-num {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .step-card {
+                padding: 25px 20px;
+            }
+
+            .step-title {
+                font-size: 1.2rem;
+            }
+
+            .actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-metal,
+            .btn-ghost {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <a href="#" class="logo">
+                        <img src="assets/images/Barzel-Final-Ver-11.png" alt="BARZEL Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        <div class="logo-design" style="display: none;">
+                            <span class="logo-main">BARZEL</span>
+                            <span class="logo-accent">●</span>
+                        </div>
+                    </a>
+                    <div class="logo-subtitle">Coached by Barel Klor</div>
+                </div>
+                <nav class="nav">
+                    <a href="#hero" class="cta-btn-small">להתחיל</a>
+                    <a href="#about">נעים להכיר</a>
+                    <a href="#pricing">תוכניות</a>
+                    <a href="#features">מה בליווי</a>
+                    <a href="#results">הקהילה</a>
+                    <a href="#faq">שאלות</a>
+                    <a href="#contact">צור קשר</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">להתאמן כמו מקצוענים, עם מקצוענים.</h1>
+            <p class="hero-subtitle">אימון מבוסס ראיות. תהליך בהתאמה אישית. ניסיון עשיר. תוצאות מובטחות.</p>
+            <p class="hero-subtitle">ליווי והדרכת מתאמני כח עם אלוף הארץ בפיתוח גוף טבעי, בראל קלור (WNBF Pro)</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/barzelonlinecoaching/coaching-call" class="btn-primary popup">הגשת מועמדות לליווי אונליין</a>
+                <a href="https://wa.me/972546222479" class="btn-primary">לאימונים פרונטליים</a>
+                <a href="https://wa.me/972546222479" class="btn-primary">לשיעורי פוזינג</a>
+            </div>
+            <p class="hero-note">מקומות מוגבלים. לרציניים בלבד. חובבנים ותחרותיים</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                
+                <div class="about-text">
+                    <h2>נעים להכיר</h2>
+                    <p class="about-description">
+                        שמי <strong>בראל קלור</strong>, מאמן כח מוסמך, שופט תחרותי, מנחה פוזינג, ומפתח גוף טבעי מקצועי בעל כרטיס <strong>WNBF Pro</strong>. 
+                        אני עוסק בענף למעלה מעשור שמהלכם זכיתי במר ישראל וייצגתי את המדינה באליפות העולם בארצות הברית.
+                    </p>
+                    <p class="about-description">
+                        את הידע שצברתי בזירה התחרותית אני משלב עם הבנה מדעית ופסיכולוגית מעמיקה,
+                        כסטודנט לפסיכולוגיה באוניברסיטת רייכמן וכמאמן שמאמין ששורש השינוי מתחיל בתודעה.
+                    </p>
+                    <p class="about-description">
+                        עבדתי פרונטלית ומרחוק עם עשרות מתאמנים בכל רמות הניסיון, מהצעד הראשון בחדר הכושר ועד לאתלטים ומתחרים מתקדמים - למטרות פיתוח כח ומסת שריר.
+                    </p>
+                    <p class="about-description">
+                        התהליך שאני בונה לכל מתאמן הוא אישי, בשילוב מתודה וכלי עבודה מבוססים מהספרות העדכנית בתחום האימון הגופני, תוך התייחסות למרכיבים פסיכולוגיים והבנה אמיתית של מה מניע מתאמנים להתמיד לאורך זמן.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">התחל/י להתחשל</h2>
+            <p class="pricing-subtitle">לבחור את התוכנית שמתאימה לך</p>
+            <div class="pricing-grid">
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">מומלץ לבינוניים עד מתקדמים</div>
+                    <h3>ליווי אונליין</h3>
+                    <div class="pricing-price">₪550</div>
+                    <div class="pricing-period">/חודש</div>
+                    <p class="pricing-description"> מעטפת ליווי מקצועי שלמה הנבנית סביב סדר היום, הרמה והמטרות שלך. </p>
+                    <ul class="pricing-features">
+                        <li>גישה לפרופיל אישי הכולל תוכניות מתעדכנות שבועיות, נתונים סטטיסטיים, מדריכים וסרטוני הדרכה</li>
+                        <li>2 סרטוני Loom חודשיים עם משוב מפורט על התקדמות, טכניקה והנחיות להמשך</li>
+                        <li>זמינות ומענה תוך 24 שעות בצ'אט טלגרם ישיר</li>
+                        <li><strong>2 צ'ק אינס בחודש (מפגש פרונטלי אופציונלי)</strong></li>
+                        <li><strong>מותאם למתאמנים בינוניים-מתקדמים</strong></li>
+                    </ul>
+                    <a href="https://meshulam.co.il/purchase?b=d9b485f0f34e8286e08f91f4393a6103" class="process-btn popup">לתשלום</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">מומלץ למתחילים</div>
+                    <h3>היברידי<br>(פרונטלי + אונליין)</h3>
+                    <div class="pricing-price">₪1,000</div>
+                    <div class="pricing-period">/חודש</div>
+                    <p class="pricing-description">שילוב בין אימונים פרונטליים בסטודיו לצד ליווי אונליין בחדר הכושר.</p>
+                    <ul class="pricing-features">
+                        <li>4 אימונים אישיים בחודש (אחד בשבוע).</li>
+                        <li>כל מה שכלול בליווי אונליין (ראה/י כרטיסייה).</li>
+                        <li>למי מתאים? </li>
+                        <li>מתאמנים מתחילים שרוצים להתקדם לעצמאות בחדר הכושר.</li>
+                    </ul>
+                    <a href="https://wa.me/972546222479" class="process-btn">בדוק זמינות לליווי היברידי</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">מומלץ למתחרים</div>
+                    <h3>ליווי תחרותי</h3>
+                    <div class="pricing-price">₪750</div>
+                    <div class="pricing-period">/חודש</div>
+                    <p class="pricing-description">הכנה תחרותית למתחרים ומתחרות בפיתוח גוף טבעי.</p>
+                    <ul class="pricing-features">
+                        <li>תכנון שנתי מלא (Off Season + Pre Prep + Prep)</li>
+                        <li>גישה לפרופיל האישי שלך, הכולל תוכנית אימונים ותזונה המתחדשות ומתעדכנות מדי שבוע, נתונים סטטיסטיים למעקב אחר התקדמות, מדריכים, סרטוני הדרכה ומאמרים מקצועיים בלעדיים. </li>
+                        <li>קבלת פרוטוקול פוזינג והדרכה לקטגוריות בילדינג וקלאסיק בצ'ק אינס השבועיים.</li>
+                        <li>פרוטוקול Back/Front/Mid/Linear Load לשבוע ה - Peak Week, הכולל מניפולציות נוזלים, אשלגן ונתרן להשגת המראה הנדרש ביום הבמה. </li>
+                         <li><strong>בשורה התחתונה: 4 צ'ק אינס בחודש (מפגש פרונטלי אחד אופציונלי).</li>
+                    </ul>
+                    <a href="https://meshulam.co.il/purchase?b=82836475497332ac97e2c9ba8b581a9b" class="process-btn popup">לתשלום</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>אימונים פרונטליים / זוגיים</h3>
+                    <div class="pricing-price">₪200</div>
+                    <div class="pricing-period">לאימון</div>
+                    <p class="pricing-description">אימוני כח וטכניקה בסטודי פרטי בהוד השרון. התחייבות ל־4 או 8 אימונים בחודש.</p>
+                    <ul class="pricing-features">
+                        <li>יחס אישי 1 על 1 או זוגי</li>
+                        <li>הקניית מיומנות טכנית ראשונית בתרגילי הבסיס כגון: סקוואט, בנץ', דדליפט. </li>
+                        <li>לאחר בניית בסיס טכני, בניית עצימות והתקדמות בתוכנית אימון ייעודית לסטודיו.</li>
+                        <li>נקודת הזינוק הראשונית למתאמני כח מתחילים.</li>
+                    </ul>
+                    <a href="https://wa.me/972546222479" class="process-btn">תאם אימון פרונטלי</a>
+                </div>
+            </div>
+            <p class="pricing-note">*כל המחירים כוללים מע״מ. מספר המקומות בכל מסלול מוגבל.*</p>
+        </div>
+    </section>
+
+
+    <!-- Apply Steps Section -->
+    <section id="apply-steps" aria-labelledby="steps-title" style="padding: 80px 0; background: var(--steel-gray);">
+        <div class="steps-wrap container">
+            <h2 id="steps-title" class="section-title">איך מצטרפים?</h2>
+
+            <div class="step">
+                <article class="step-card--new" role="region" aria-labelledby="s1t">
+                    <div class="step-badge--new"><div class="badge-num--new">1</div></div>
+                    <div class="step-content--new">
+                        <div class="step-head" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                            <h3 id="s1t" class="step-title--new">קובעים שיחת התאמה בזום</h3>
+                            <button class="step-toggle" aria-expanded="false" aria-controls="s1b" title="פתח/י">+</button>
+                        </div>
+                        <div id="s1b" class="step-body" hidden>
+                            <p>מאפיינים יעד, ניסיון ומגבלות ובודקים התאמה מהירה.</p>
+                            <div class="actions">
+                                <a href="https://calendly.com/barzelonlinecoaching/coaching-call" class="btn-metal popup">קביעת שיחה</a>
+                                <a href="https://forms.gle/gwEwstUVmLswdx1p7" class="btn-ghost">טופס התאמה</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="step">
+                <article class="step-card--new" role="region" aria-labelledby="s2t">
+                    <div class="step-badge--new"><div class="badge-num--new">2</div></div>
+                    <div class="step-content--new">
+                        <div class="step-head" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                            <h3 id="s2t" class="step-title--new">מנסחים מטרות ובוחרים מסלול</h3>
+                            <button class="step-toggle" aria-expanded="false" aria-controls="s2b" title="פתח/י">+</button>
+                        </div>
+                        <div id="s2b" class="step-body" hidden>
+                            <p>סקירת היסטוריית אימון/בריאות, זמינות וציפיות—בלי הפתעות.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="step">
+                <article class="step-card--new" role="region" aria-labelledby="s3t">
+                    <div class="step-badge--new"><div class="badge-num--new">3</div></div>
+                    <div class="step-content--new">
+                        <div class="step-head" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                            <h3 id="s3t" class="step-title--new">תשלום באתר ומילוי שאלון מקדים</h3>
+                            <button class="step-toggle" aria-expanded="false" aria-controls="s3b" title="פתח/י">+</button>
+                        </div>
+                        <div id="s3b" class="step-body" hidden>
+                            <p>לאחר התשלום מקבלים הסכם + שאלון (אימונים, תזונה, שינה, פציעות) לבניית תכנית בטוחה ומדויקת.</p>
+                           
+                            <p class="step-desc--new"></p>
+                            <div class="actions">
+                                <a href="#pricing" class="btn-metal">תשלום</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="step">
+                <article class="step-card--new" role="region" aria-labelledby="s4t">
+                    <div class="step-badge--new"><div class="badge-num--new">4</div></div>
+                    <div class="step-content--new">
+                        <div class="step-head" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                            <h3 id="s4t" class="step-title--new">קבלת פרוטוקול והתחלת ליווי</h3>
+                            <button class="step-toggle" aria-expanded="false" aria-controls="s4b" title="פתח/י">+</button>
+                        </div>
+                        <div id="s4b" class="step-body" hidden>
+                            <p>תכנות תקופתי, ניתוח טכניקה ומדדים. הכל שקוף ופשוט ליישום.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">מה בליווי?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>תוכנית אימונים</h3>
+                    <p>תוכנית אימונים מבוססת ראיות הנכתבת בהתאמה אישית ומכוונת להשגת המטרות.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>צ׳ק-אין וידאו שבועי</h3>
+                    <p>סרטון משוב אישי הכולל ניתוח טכני, הערכת התקדמות עם פידבק להמשך</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍎</div>
+                    <h3>אסטרטגיות דיאטה</h3>
+                    <p>נלמד לעבוד עם דיאטה אינטואיטיבית, גמישה או תפריט בהלימה עם סגנון החיים</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>ניהול עומסים מתקדם</h3>
+                    <p>פיריודיזציה להבטחת שיפור ביצועים מתמשך.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>תמיכה בצ׳אט ופנים מול פנים</h3>
+                    <p>זמינות בצ'אט ומפגשים פרונטליים.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>מדדים ושקיפות מלאה</h3>
+                    <p>מעקב סטטיסטי אחרי מדדי הרכב גוף כגון: משקל, היקפים, צעדים, פעילות במבט שנתי.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <h2 class="section-title">קהילת המתברזלים - תוצאות</h2>
+            <p class="results-subtitle">עזבו רגע את התוצאות המרשימות בצד. הדרך שכל אחד ואחת עבר/ה בדרך לשם היא לא פחות ממדהימה.</p>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-3.jpg" alt="דנה ויסני - WNBF Israel" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🥉<br>דנה ויסני<br>WNBF Israel</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>דנה ויסני<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">מדליית ארד WNBF Israel 2022 - ביקיני 🥉</span></h4>
+                        <p class="result-description">
+                            דנה ויסני הגיעה מעולם הקרוספיט והגלישה, עם רקע תחרותי מרשים וזכיה במקום השלישי בקטגוריית ביקיני נוער בשנת 2022. 
+                            לאחר התחרות והדגשים מפאנל השיפוט, היא ביקשה להעמיק בפיתוח גוף במטרה לבחון מעבר לקטגוריית פיגר (Figure).
+                            במהלך התהליך היא עלתה לשיא משקל 70 ק"ג על 176 ס"מ, תוך הצגת שיפור דרמטי בפרופורציות ובכתפיים.  הבלוק האחרון שביצעה - ספציפיקציה לכתפיים, שידרג משמעותית את הפיזיק שלה. 
+                            דנה למדה לשלב בין עולם הכח לעולם הקרוספיט והגלישה, מתוך תפיסה שפיתוח גוף הוא לא "העיקר", אלא חלק מהדרך שמחזקת אותה בכל תחום אחר בחיים 
+                            ככל והיא הלכה והתבגרה, הפנימה כי מטרות פיתוח הגוף אינן בהכרח משקפות את מי שהיא רוצה להיות באמת, ובחרה לתעל את הידע והמשמעת שצברה לעולמות הגלישה והאימון הפונקציונלי.
+                
+                    
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• כיום דנה מאמנת כושר פרונטלית ואונליין בחו"ל</div>
+                            <div class="stat-item">• ממשיכה להתמיד באימוני כח בתדירות של שלוש פעמים בשבוע</div>
+                            <div class="stat-item">• משמרת את כל עקרונות העבודה והחשיבה שרכשה בליווי המקצועי ומיישמת אותם עם המתאמנים שלה.</div>
+                        
+                        </div>
+                        <p class="result-quote">
+                            <em>"בראל: בעיניים שלי דנה היא השראה אחת ענקית. היא מגלמת את הגישה שאני הכי מאמין בה - פיתוח גוף לצד החיים, ולא החיים עצמם. היא מפגינה עוצמה נשית, ומהווה כיום מודל לדוגמה לנשים אחרות. "</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-4.jpg" alt="אלכס יודלא - מר קפריסין 2024" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🧍‍♂️<br>מתחרה על הבמה</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>אלכס יודלא<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">מר קפריסין 2024</span></h4>
+                        <p class="result-description">
+                            אלכס הגיע עם מטרה לעלות לבמה ברמה בינלאומית.<br>
+                            לאורך שנתיים של ליווי באוף סיזן ובפרפ, עבר תהליך ארוך וממושך של עלייה במסת שריר, הכנה תחרותית רגועה וחכמה - עד הגעה לסטנדרט של קטגוריית בילדינג - שכולל הצגת רמה של חיטוב מתקדם על אחוז שומן חד-ספרתי.
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">🥇 מקום 1 – WNBF קפריסין</div>
+                            <div class="stat-item">🥈 מקום 2 – WNBF ישראל</div>
+                            <div class="stat-item">🇪🇸 מקום 12 מתוך 18 – WNBF ספרד</div>
+                            <div class="stat-item">•  מ-52 ק"ג בגיל 22 לרמה בינלאומית</div>
+                            <div class="stat-item">• שינוי מלא בגישה לאימונים ותזונה מאז 2021</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"מי היה מאמין שאסיים במקום הראשון בתחרות הראשונה שלי, ועוד בחו״ל. זה התחיל בכלל מחלום ילדות — להיות מפתח גוף. שנים לא הצלחתי להתמיד, עד שבקורונה ב־2021 החלטתי לשנות כיוון. מאז עברתי דרך ארוכה: הגוף, האימונים והחשיבה שלי השתנו לגמרי. התחרות בישראל הייתה אחת החוויות המשמעותיות בחיים שלי, ובראל ליווה אותי לכל אורך הדרך — מדויק, תומך ודוחף לגרסה הכי טובה של עצמי. אני זוכר שבגיל 22 שקלתי רק 52 קילו, אז בכל רגע קשה, כשכואב או כשאין כוח להמשיך, אני מסתכל אחורה ונזכר מאיפה התחלתי ולאן הגעתי — וזה מה שגורם לי להמשיך לדחוף קדימה."</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-2025.jpg" alt="ליאור קפלן - ליווי תחרותי" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🏆<br>מתאמן תחרותי</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>ליאור קפלן<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">מתכונן למר ישראל הטבעי 2026</span></h4>
+                        <p class="result-description">
+                            נער צעיר ומבטיח שהופך ממתאמן מתחיל למתאמן מתקדם.<br>
+                            עובד לפי מחזורי אימון מסודרים (Mesocycles) בפיריודיזציה מותאמת להיפרטרופיה ופאוורבילדינג.
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• תחת הדרכה מאז היותו בן 15</div>
+                            <div class="stat-item">•  עלה מעל 8 ק"ג במסת שריר רזה</div>
+                            <div class="stat-item">• התנסה בפרה פרפ (חיטוב מקדים להכנה תחרותית) לקראת 2026</div>
+                            <div class="stat-item">• 4 צלחות דדליפט רומני, 3.5 צלחות סקוואט, 4 צלחות T-BAR</div>
+                            <div class="stat-item">• מתכונן לקראת השתתפות במקצה הנוער ב- WNBF ISRAEL 2026</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"ההתפתחות שלי בתור מתאמן וגם בתור בן אדם בזכות בראל הייתה אסטרונומית. רכשתי כלים ששינו לי את החיים – להיות גם ספורטאי טוב יותר וגם אדם טוב יותר. בראל יודע לקחת את הידע המדעי ולחבר אותו לנפש של המתאמן. זה מה שהופך אותו לאחד המאמנים הכי טובים בארץ — חכם, קשוב, ודוחף אותך להבין באמת מה אתה עושה."</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-6.jpg" alt="ר. מ. - תמונת לפני ואחרי" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>👩‍🦰<br>לפני/אחרי באור טבעי</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>תאמר עמשה<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">   מדליית ארד WNBF Israel 2022 - קלאסיק🥉</span></h4>
+                        <p class="result-description">
+                            בשנת 2022 תאמר ואני הצבנו מטרה ברורה להתחרות ב - WNBF Israel בקטגורית קלאסיק פיזיק. שימרנו מסת שריר במהלך החיטוב התחרותי באמצעות שימוש ב - Refeed Days, Diet Breaks על דיאטה דלת פחמימות. תאמר נדרש היה להתחטב על קלוריות מאוד נמוכות (היות וההוצאה האנרגטית שלו לא גבוהה) והוא התמיד ונהנה מהתהליך באופן מעורר השראה. בנוסף, למדנו פוזינג ביחד בסטודיו, פיתחנו סגנון פרזנצטיה אישי ובנינו רוטינה.<br>
+                            
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• מקום שלישי באליפות הארץ בפיתוח גוף טבעי 2022</div>
+                            <div class="stat-item">• קטגורית קלאסיק פיזיק</div>
+                            <div class="stat-item">• הגעה לחיטוב תחרותי מתאים לקטגוריה</div>
+                            <div class="stat-item">• מתאר שעבר חוויה מעצימה ומשמעותית וסיגל ערכים כמו משמעת, דבקות במטרה.</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"ההכנה לתחרות לימדה אותי דברים שאני לא חושב שאפשר ללמוד בשקום מקום אחר. החל ממשמעת עצמית והכוח שיש לסדר, ארגון, והטמעת הרגלים, עד ההתמודדיות עם הקשיים המנטליים והפיזיים הבלתי נמנעים בתהליך שכזה. אבל עם כל הקשיים שבאים עם הכנה תחרותית, אני יכול להגיד שנהניתי מכל רגע. גם ברגעים הקשים, והנקודות הכי נמוכות בהכנה, שמרתי על חיוך כי ידעתי שאני עושה משהו שאני אוהב - וזו זכות ענקית. תודה ענקית מגיעה למאמן, מדריך, מנטור, ג'ים ברו, ולאיש שדאג שאגיע לתחרות לא רק בשייפ הכי טוב שאני יכול להביא, אלא גם במיינדסט הכי טוב והמנטליות הכי טובה ומקדמת שיש. בראל גרם לי להתאהב בספורט הזה ולהעמיק ולחקור עוד ועוד על התחום ובזכותו גיליתי שיש הרבה מעבר לפן החיצוני הכל כך דומיננטי בפיתוח גוף. "</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-2.jpg" alt="רועי כהן - תמונת לפני ואחרי" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🔥<br>רועי כהן<br>חיטוב מתקדם</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>רועי כהן<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">ליווי אונליין - חיטוב מתקדם</span></h4>
+                        <p class="result-description">
+                            תהליך חיטוב מדעי של 12 שבועות עם מעבר מחשיבה "Eat Big to Get Big" לגישה מתונה יותר.<br>
+                            רועי ביצע לראשונה תהליך חיטוב לפי עקרונות הדיאטה גמישה (Flexible Dieting), שאיפשרה לו להנות ממבחר רב של מאכלים, תוך עמידה בכמויות אבות המזון והסך הקלורי שהצבנו. 
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• מעבר מאחוז שומן דו-ספרתי לחד-ספרתי</div>
+                            <div class="stat-item">• שיפור משמעותי בהרכב הגוף</div>
+                            <div class="stat-item">• שינוי מנטלי בולט - סיגל משמעת וראייה לטווח ארוך</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"אני ובראל התחלנו את החיטוב הראשון שלי למעשה. פניתי אליו כי הוא תמיד היה קורן בידע ורציתי לא רק מאמן אלא גם מורה שילמד אותי למה בעצם אני עושה את הדברים האלו. ירדנו 15 קילו התחטבתי בצורה משמעותית כאילו אני בן אדם אחר לגמרי אבל זו לא הנקודה פה העיקרית. הדבר המשמעותי שקיבלתי מהליווי איתו זה ידע שמלווה אותי עד עכשיו."</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-8.jpg" alt="י. ש. - צילום אימון" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🏋️‍♂️<br>צילום אימון</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>אמיר אבנון<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">מדליית זהב WNBF Israel 2x - 🥇קלאסיק</span></h4>
+                        <p class="result-description">
+                            ההיכרות הראשונית שלי עם אמיר הייתה ברגע משותף על הבמה, במקצה אלוף האלופים בקטגורית בשנת 2021, עוד כשהיינו בתחילת הדרך בפיתוח גוף. עוד באותם ימים הוא הפגין רצינות וכישרון בפרזנטציה על הבמה ובחדר הכושר המשותף שהתאמנו בו. 
+                         כשאמיר התחיל איתי את הליווי המקצועי, המטרה הייתה להתקדם לשלב הבא - מעבר מקטגורית קלאסיק פיזיק (בה הצליח בענק) לגרסה משודרגת בקטגורית בילידיג. התקשורת איתו הייתה עניינית ותכליתית, והוא היה מאוד ממוקד במטרה. הוא התחזק בצורה משמעותית בכל תרגילי הבסיס, שיפר את הרחב גבי והפלג גוף התחתון כדי לייצר איקס פריים חזק יותר לקטגורה והביצועים נסקו.
+                        אמיר הוסיף מסת שריר רב בזכות התמדה בעבודה עקבית, יש ויגידו אף ,"משעממת", וקיבל הבנה מקצועית של מה שהוא עושה. כל דיווח שלו שיקף בגרות ואחריות - הוא רצה להבין לעומקם של הדברים וזה היה תענוג. 
+                
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• 4 צלחות בחתירה במכונת T-BAR</div>
+                            <div class="stat-item">• מעבר מפיזיק מותאם לקלאסיק לגרסת בילדינג</div>
+                            <div class="stat-item">• הריץ בלוק ספציפי לרגליים וגב - לשיפור הפרופורציות.</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"פלג גוף תחתון שובר שיאים,התקדמתי במשקלי עבודה כמעט בכל התרגילים, והגוף מגיב אש. "</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-9.jpg" alt="יהלי בן אברהם - תמונת לפני ואחרי" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>💪<br>יהלי בן אברהם<br>שינוי מרשים</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>יהלי בן אברהם<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">סטודנטית למדעי התזונה בפקולטה לחקלאות</span></h4>
+                        <p class="result-description">
+                           יהלי יהלי ואני התחלנו להתאמן יחד עוד בהיותה בתחילת הדרך, עם ידע בסיסי בעולם האימונים עם לא מעט חששות מלוות. 
+                           בתחילת הדרך פתחנו בתהליך של עלייה במסת שריר, תהליך שמצריך גם מעט שילוב עליה במעט מסת שומן - דבר שמעט הרתיע את יהלי תחילה.
+                           עם הזמן למדנו להסיט את הקשב מהמראה החיצוני לביצועים בחדר הכושר, והפנמנו את הרציונל מאחורי השלב הזה בתהליך.
+                           בהמשך, יהלי עברה לתהליך חיטוב בו היא ירדה כ - 8 ק"ג והרגישה התקדמות עצומה - הן בכח, בטכניקה ובעיקר הקרינה ביטחון מלא פנימי וחיצוני. 
+                           
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• שינוי משמעותי בהרכב הגוף </div>
+                            <div class="stat-item">• עלייה ניכרת במסת שריר רזה</div>
+                            <div class="stat-item">• ירידה משמעותית באחוזי השומן בגוף</div>
+                            <div class="stat-item">• ביצועים מרשימים: 5 * 85 בדדליפט רומני </div>
+
+                        </div>
+                        <p class="result-quote">
+                            <em>"התהליך עם בראל לימד אותי שאפשר לשנות את הגוף בלי דיאטות קיצוניות. למדתי לאכול נכון, להתאמן חכם ולראות תוצאות אמיתיות. הגישה המדעית והליווי האישי עזרו לי להבין את הגוף שלי ולבנות הרגלים שיישארו איתי לכל החיים."</em>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image">
+                        <img src="assets/images/img-10.jpg" alt="חני לודויג - תמונת לפני ואחרי" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>🌟<br>חני לודויג<br>שינוי מרשים</span>';">
+                    </div>
+                    <div class="result-content">
+                        <h4>חני לודויג<br><span style="font-size: 0.9rem; color: var(--silver); font-weight: 500;">מאמנת כושר ומפתחת גוף - בניית מסת שריר</span></h4>
+                        <p class="result-description">
+                            חני הצטרפה לליווי המקצועי בשלב שבו חיפשה לבסס תשתית איכותית של כח וטכניקה למטרות פיתוח גוף. חני  עברה שלבים רבים לאורך הדרך - חיטוב, אוף סיזן והכנה לתחרות, שבמהלכה עברה לעבוד עם מאמנת פיתוח גוף מפורסמת מחו"ל (אנגליה). 
+                        .המטרה עם חני הייתה לסגל לה הרגלי חשיבה בריאים של מפתחת גוף הכוללים - אוטורגולציה באימונים, ניתוק מדפוסי חשיבה מסוכנים כמו 'הכל או כלום', שחרור מהמיקוד בגוף והסטתו לביצועים באימונים. היא הגיעה עם תשוקה אמיתית ללמוד, והפכה למאמנת
+                        היא הגיעה עם תשוקה אמיתית ללמוד, והפכה למאמנת מצוינת בזכות הידע והניסיון שצברה. במהלך התהליך היא מסרה דיווחים מפורטים ומלאים בזמן, עמדה ביעדים בצ'ק אינס שהצבנו וגם כשהיה קשה היא הראתה יכולת לבצע Bounce Back מרשים. 
+                        </p>
+                        <div class="result-stats">
+                            <div class="stat-item">• עלייה משמעותית במסת שריר רזה</div>
+                            <div class="stat-item">• שיפור בכוח ובביצועים בתרגילי הבסיס</div>
+                            <div class="stat-item">• ביצועים מצוינים: 100 ק"ג בדדליפט רומני </div>
+                            <div class="stat-item">• שינוי בהרכב הגוף ובמראה הכללי</div>
+                            <div class="stat-item">• בניית ביטחון עצמי ופיתוח מסוגלות עצמית</div>
+                        </div>
+                        <p class="result-quote">
+                            <em>"התהליך איתך היה משמעותי בשבילי וכל הדרך שעברנו ביחד כמאמן ומתאמנת. העשרת אותי בכלכך המון ידע, הבאת אותי תמיד לקצה היכולת והעבודה שלנו הייתה מדהימה ביחד! הליווי תחתייך היה משמעותי מאוד בשבילי. הבאת לי המון כלים לדרך כמפתחת גוף, כמתחרה, כמתאמנת ואפילו כמאמנת. תמיד היית בשבילי וידעת בדיוק איך להתאים, מה להתאים ולהיות הכי מקצועי שיש. אין כמוך בראל אתה אחד ויחיד❤"</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">שאלות נפוצות</h2>
+            
+            <!-- ליווי אונליין -->
+            <div class="faq-category">
+                <div class="faq-category-header">
+                    <span class="faq-category-icon">💻</span>
+                    <h3>ליווי אונליין</h3>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>איך עובד הליווי אונליין בפועל?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        כל מתאמן עובר תהליך מותאם אישית הכולל <strong>2 Check In's בחודש</strong> –<br>
+                        מפגש פרונטלי בסטודיו אחת לשבועיים + סרטון Loom עם פידבק וידאו אישי על ביצועים, טכניקה ומדדים.<br>
+                        במהלך השבוע תקבל מענה שוטף בוואטסאפ והתאמות בתוכנית לפי ההתקדמות שלך.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>האם אני צריך חדר כושר?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        לא בהכרח. ניתן לבנות תוכנית לציוד ביתי מלא או חלקי, בהתאם למה שזמין לך.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>כמה ליווי אישי זה באמת?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        הליווי כולל ניתוח טכני, תזונתי ומנטלי, עם מענה יומיומי אישי – אתה אף פעם לא "רק עוד מתאמן".
+                    </div>
+                </div>
+            </div>
+
+            <!-- ליווי היברידי -->
+            <div class="faq-category">
+                <div class="faq-category-header">
+                    <span class="faq-category-icon">🏋️‍♂️</span>
+                    <h3>ליווי היברידי (פרונטלי + אונליין)</h3>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>מה כולל הליווי ההיברידי?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        שילוב של מפגשים אישיים בסטודיו עם ליווי אונליין מלא בין האימונים.<br>
+                        בכל שבוע מתקיים אימון פרונטלי ממוקד טכניקה, ובין המפגשים תקבל מעקב וידאו, עדכונים ודוחות Loom לפי הצורך.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>האם זה מתאים גם למתחילים?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        כן. הליווי נבנה לפי הרמה, הקצב והמטרות שלך – דגש על בסיס יציב, תנועה נכונה והבנה של התהליך.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>מה ההבדל בינו לבין ליווי אונליין רגיל?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        בליווי ההיברידי יש נוכחות פיזית אחת לשבוע שמאפשרת דיוק טכני עמוק יותר, בזמן שהליווי אונליין משלים את ההתקדמות בין המפגשים.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ליווי תחרותי -->
+            <div class="faq-category">
+                <div class="faq-category-header">
+                    <span class="faq-category-icon">🏆</span>
+                    <h3>ליווי תחרותי</h3>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>למי מתאים הליווי התחרותי?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        למתאמנים טבעיים השואפים לעלות לבמה או להיכנס לעונת הכנה.<br>
+                        התהליך כולל <strong>4 Check In's בחודש</strong> עם סרטוני Loom מוקלטים ומפורטים, ניהול עומסים תחרותי, בניית Peak Week ותמיכה מנטלית לאורך כל הדרך.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>מתי כדאי להתחיל הכנה לתחרות?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        לרוב 20–24 שבועות לפני הבמה, בהתאם למצב הפיזיולוגי.<br>
+                        ככל שמתחילים מוקדם יותר, ניתן להגיע בצורה מבוקרת ובריאה לשיא.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>האם אתה מלווה גם בפוזינג?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        כן. בליווי התחרותי כלול גם ייעוץ פוזינג בסיסי וליווי בהצגה הבימתית.
+                    </div>
+                </div>
+            </div>
+
+            <!-- אימונים פרונטליים -->
+            <div class="faq-category">
+                <div class="faq-category-header">
+                    <span class="faq-category-icon">🤝</span>
+                    <h3>אימונים פרונטליים / זוגיים</h3>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>האם אפשר לקבוע אימון חד-פעמי?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        כן. ניתן להזמין מפגש בודד לייעוץ טכניקה, Fine-Tuning או בניית תוכנית אישית.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>האם אפשר להגיע עם בן/בת זוג?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        בהחלט. ניתן להזמין אימון זוגי במחיר זהה של 200 ש"ח לאימון (100 ש"ח לאדם).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>מה אני מקבל מכל אימון?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        ניתוח טכני מדויק, תיקון ביצועים, הדרכה אישית והבנה עמוקה של העקרונות שיקדמו אותך באימונים הבאים.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="assets/images/6.png" width="150px" alt="BARZEL Coaching Logo" class="footer-logo">
+                <div class="footer-contact">
+                    <a href="mailto:Barelklor@gmail.com">Barelklor@gmail.com</a>
+                    <a href="tel:+972546222479">054-6222479</a>
+                    <a href="https://wa.me/972546222479" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="https://instagram.com/Barelklor" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+                <nav class="footer-links" style="margin-top: 20px;">
+                    <a href="privacy.html">מדיניות פרטיות</a>
+                    <a href="terms.html">תנאי שימוש</a>
+                    <a href="disclaimer.html">הצהרת בריאות</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BARZEL Coaching. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                אנחנו משתמשים בעוגיות כדי לשפר את חווית הגלישה שלך. עוגיות מסוימות הכרחיות לתפקוד האתר, בעוד אחרות עוזרות לנו להבין כיצד את/ה משתמש/ת באתר.
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">קבל הכל</button>
+                <button class="cookie-btn cookie-reject" onclick="rejectCookies()">דחה הכל</button>
+                <a href="privacy.html" class="cookie-settings">מדיניות פרטיות</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Widget -->
+    <button class="accessibility-toggle" aria-label="פתח תפריט נגישות">♿</button>
+    <div class="accessibility-widget" style="display: none;">
+        <div class="accessibility-header">
+            <h3 class="accessibility-title">הגדרות נגישות</h3>
+            <button class="accessibility-close" aria-label="סגור תפריט נגישות">×</button>
+        </div>
+        <div class="accessibility-options">
+            <div class="accessibility-option">
+                <span class="accessibility-label">גודל טקסט</span>
+                <div class="font-size-controls">
+                    <button class="font-size-btn" data-action="decrease" aria-label="הקטן גודל טקסט">-</button>
+                    <button class="font-size-btn" data-action="increase" aria-label="הגדל גודל טקסט">+</button>
+                </div>
+            </div>
+            <div class="accessibility-option">
+                <label class="accessibility-switch">
+                    <input type="checkbox" id="highContrastToggle">
+                    <span class="accessibility-slider"></span>
+                </label>
+                <span class="accessibility-label">ניגודיות גבוהה</span>
+            </div>
+            <div class="accessibility-option">
+                <label class="accessibility-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="accessibility-slider"></span>
+                </label>
+                <span class="accessibility-label">מצב כהה</span>
+            </div>
+            <div class="accessibility-option">
+                <label class="accessibility-switch">
+                    <input type="checkbox" id="lineSpacingToggle">
+                    <span class="accessibility-slider"></span>
+                </label>
+                <span class="accessibility-label">ריווח מוגדל</span>
+            </div>
+            <div class="accessibility-option">
+                <label class="accessibility-switch">
+                    <input type="checkbox" id="stopAnimationsToggle">
+                    <span class="accessibility-slider"></span>
+                </label>
+                <span class="accessibility-label">עצור אנימציות</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.faq-icon').forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.faq-question').forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+            element.classList.toggle('active');
+        }
+
+        // ===== BARZEL Steps – Accessible Accordion =====
+        (function(){
+          // Load Calendly widget if not already on page
+          if(!document.querySelector('script[src*="assets.calendly.com"]')){
+            var s=document.createElement('script');
+            s.src="https://assets.calendly.com/assets/external/widget.js"; s.async=true;
+            document.head.appendChild(s);
+          }
+
+          var toggles = document.querySelectorAll('#apply-steps .step-toggle');
+          if(!toggles.length) return;
+
+          // Helper: close all
+          function closeAll(except){
+            toggles.forEach(function(btn){
+              if(btn===except) return;
+              var panel=document.getElementById(btn.getAttribute('aria-controls'));
+              btn.setAttribute('aria-expanded','false');
+              if(panel){ panel.classList.remove('open'); panel.hidden=true; }
+            });
+          }
+
+          // Init each toggle
+          toggles.forEach(function(btn){
+            var id = btn.getAttribute('aria-controls');
+            var panel = document.getElementById(id);
+            if(!panel) return;
+
+            // Ensure defaults
+            btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded')||'false');
+            btn.setAttribute('type','button');
+            panel.hidden = true;
+
+            function openMe(){
+              closeAll(btn);
+              btn.setAttribute('aria-expanded','true');
+              panel.hidden=false;
+              requestAnimationFrame(function(){ panel.classList.add('open'); });
+            }
+            function toggle(){
+              var isOpen = btn.getAttribute('aria-expanded')==='true';
+              if(isOpen){
+                btn.setAttribute('aria-expanded','false');
+                panel.classList.remove('open'); panel.hidden=true;
+              } else {
+                openMe();
+              }
+            }
+
+            btn.addEventListener('click', toggle);
+            btn.addEventListener('keydown', function(e){
+              if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggle(); }
+              // Arrow navigation between headers (optional UX)
+              if(e.key==='ArrowDown' || e.key==='ArrowUp'){
+                e.preventDefault();
+                var i=[].indexOf.call(toggles, btn);
+                var n = e.key==='ArrowDown' ? (i+1)%toggles.length : (i-1+toggles.length)%toggles.length;
+                toggles[n].focus();
+              }
+            });
+          });
+
+          // Open by query e.g. ?open=s3b or ?open=3
+          (function(){
+            var q=new URLSearchParams(location.search); var o=q.get('open');
+            if(!o) return;
+            var target = document.getElementById('s'+o+'b') || document.getElementById(o);
+            if(!target) return;
+            var btn = document.querySelector('.step-toggle[aria-controls="'+target.id+'"]');
+            if(btn){ btn.click(); document.querySelector('#apply-steps').scrollIntoView({behavior:'smooth',block:'start'}); }
+          })();
+        })();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(14, 14, 14, 0.98)';
+            } else {
+                header.style.background = 'rgba(14, 14, 14, 0.95)';
+            }
+        });
+</script>
+<!-- Calendly popup handler -->
+<script>
+    (function(){
+        function openCalendlyPopup(e){
+            e.preventDefault();
+            var url = this.href;
+            // If Calendly widget is available, use its popup modal (matches actual Calendly behavior)
+            if(window.Calendly && typeof window.Calendly.initPopupWidget === 'function'){
+                try{
+                    window.Calendly.initPopupWidget({ url: url });
+                    return;
+                }catch(err){ /* fall through to window.open fallback */ }
+            }
+
+            // Fallback: open centered browser popup window
+            var ww = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            var wh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+            var w = ww < 600 ? Math.max(ww - 40, 300) : 900;
+            var h = ww < 600 ? Math.max(wh - 80, 400) : 700;
+            var left = Math.round((screen.width - w) / 2);
+            var top = Math.round((screen.height - h) / 2);
+            var features = 'toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+            features += ',width=' + w + ',height=' + h + ',top=' + top + ',left=' + left;
+            var popup = window.open(url, 'calendly_popup', features);
+            try { if (popup) popup.focus(); else window.location.href = url; } catch(err){ window.location.href = url; }
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            // Ensure Calendly widget script is present; if not, load it so initPopupWidget becomes available
+            if(!document.querySelector('script[src*="assets.calendly.com"]')){
+                var s=document.createElement('script'); s.src='https://assets.calendly.com/assets/external/widget.js'; s.async=true; document.head.appendChild(s);
+            }
+
+            var els = document.querySelectorAll('a.popup');
+            els.forEach(function(el){ el.addEventListener('click', openCalendlyPopup); });
+        });
+    })();
+</script></body>
+<!-- Premium movement initializer (parallax) -->
+<script>
+    (function(){
+        // tiny parallax: elements with .premium-parallax will tilt / move on pointer move
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        function initPremiumParallax(){
+            var nodes = document.querySelectorAll('.premium-parallax');
+            if(!nodes.length) return;
+
+            nodes.forEach(function(el){
+                var depth = parseFloat(el.getAttribute('data-depth')) || 12; // px rotation sensitivity
+                var rect = null;
+                var last = {rx:0, ry:0};
+
+                function onMove(e){
+                    if(!rect) rect = el.getBoundingClientRect();
+                    var x = (e.clientX || (e.touches && e.touches[0].clientX)) - (rect.left + rect.width/2);
+                    var y = (e.clientY || (e.touches && e.touches[0].clientY)) - (rect.top + rect.height/2);
+                    var rx = (y / rect.height) * depth * -1; // rotateX
+                    var ry = (x / rect.width) * depth; // rotateY
+                    // clamp
+                    rx = Math.max(Math.min(rx, depth), -depth);
+                    ry = Math.max(Math.min(ry, depth), -depth);
+                    // smooth with simple lerp
+                    last.rx += (rx - last.rx) * 0.18;
+                    last.ry += (ry - last.ry) * 0.18;
+                    el.style.transform = 'perspective(800px) rotateX(' + last.rx.toFixed(2) + 'deg) rotateY(' + last.ry.toFixed(2) + 'deg)';
+                }
+
+                function onLeave(){
+                    last.rx = 0; last.ry = 0;
+                    el.style.transform = '';
+                }
+
+                // Attach listeners
+                el.addEventListener('pointermove', onMove);
+                el.addEventListener('pointerleave', onLeave);
+                el.addEventListener('touchmove', onMove, {passive:true});
+                el.addEventListener('touchend', onLeave);
+            });
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPremiumParallax); else initPremiumParallax();
+    })();
+</script>
+    <!-- Premium reveal on scroll (IntersectionObserver) -->
+    <script>
+        (function(){
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var selectorList = [
+                '.section-title',
+                '.pricing-card',
+                '.result-card',
+                '.feature-card',
+                '.step-card--new',
+                '.about-text',
+                '.gallery-image',
+                '.pricing-badge'
+            ];
+
+            function addClassToSelectors(){
+                selectorList.forEach(function(sel){
+                    document.querySelectorAll(sel).forEach(function(el){
+                        if(!el.classList.contains('premium-animate')) el.classList.add('premium-animate');
+                    });
+                });
+            }
+
+            function initObserver(){
+                var io = new IntersectionObserver(function(entries){
+                    entries.forEach(function(entry){
+                        var el = entry.target;
+                        if(entry.isIntersecting){
+                            var delay = parseFloat(el.getAttribute('data-reveal-delay')) || 0;
+                            setTimeout(function(){ el.classList.add('is-visible'); }, delay);
+                            // Stop observing once visible
+                            io.unobserve(el);
+                        }
+                    });
+                },{ root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+
+                document.querySelectorAll('.premium-animate').forEach(function(el){
+                    // Optional per-element stagger via data-order
+                    var order = parseInt(el.getAttribute('data-reveal-order')) || 0;
+                    if(order && !el.hasAttribute('data-reveal-delay')) el.setAttribute('data-reveal-delay', order * 120);
+                    io.observe(el);
+                });
+            }
+
+            function ready(){ addClassToSelectors(); initObserver(); }
+            if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
+        })();
+
+        // Initialize accessibility widget
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load saved preferences
+            loadAccessibilityPreferences();
+
+            // Toggle widget visibility
+            const widget = document.querySelector('.accessibility-widget');
+            const toggle = document.querySelector('.accessibility-toggle');
+            const closeBtn = document.querySelector('.accessibility-close');
+
+            toggle.addEventListener('click', () => {
+                widget.style.display = widget.style.display === 'none' ? 'block' : 'none';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                widget.style.display = 'none';
+            });
+
+            // Font size controls
+            let currentFontSize = parseInt(localStorage.getItem('accessibility_fontSize')) || 100;
+            const fontSizeBtns = document.querySelectorAll('.font-size-btn');
+            document.documentElement.style.fontSize = `${currentFontSize}%`;
+
+            fontSizeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    if (action === 'increase' && currentFontSize < 150) {
+                        currentFontSize += 10;
+                    } else if (action === 'decrease' && currentFontSize > 70) {
+                        currentFontSize -= 10;
+                    }
+                    document.documentElement.style.fontSize = `${currentFontSize}%`;
+                    localStorage.setItem('accessibility_fontSize', currentFontSize);
+                });
+            });
+
+            // High Contrast Mode
+            const highContrastToggle = document.getElementById('highContrastToggle');
+            highContrastToggle.checked = localStorage.getItem('accessibility_highContrast') === 'true';
+            if (highContrastToggle.checked) {
+                document.body.classList.add('high-contrast');
+            }
+
+            highContrastToggle.addEventListener('change', () => {
+                document.body.classList.toggle('high-contrast');
+                localStorage.setItem('accessibility_highContrast', highContrastToggle.checked);
+            });
+
+            // Dark Mode
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            darkModeToggle.checked = localStorage.getItem('accessibility_darkMode') === 'true';
+            if (darkModeToggle.checked) {
+                document.body.classList.add('dark-mode');
+            }
+
+            darkModeToggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('accessibility_darkMode', darkModeToggle.checked);
+            });
+
+            // Line Spacing
+            const lineSpacingToggle = document.getElementById('lineSpacingToggle');
+            lineSpacingToggle.checked = localStorage.getItem('accessibility_lineSpacing') === 'true';
+            if (lineSpacingToggle.checked) {
+                document.body.classList.add('increased-spacing');
+            }
+
+            lineSpacingToggle.addEventListener('change', () => {
+                document.body.classList.toggle('increased-spacing');
+                localStorage.setItem('accessibility_lineSpacing', lineSpacingToggle.checked);
+            });
+
+            // Stop Animations
+            const stopAnimationsToggle = document.getElementById('stopAnimationsToggle');
+            stopAnimationsToggle.checked = localStorage.getItem('accessibility_stopAnimations') === 'true';
+            if (stopAnimationsToggle.checked) {
+                document.body.classList.add('no-animations');
+            }
+
+            stopAnimationsToggle.addEventListener('change', () => {
+                document.body.classList.toggle('no-animations');
+                localStorage.setItem('accessibility_stopAnimations', stopAnimationsToggle.checked);
+            });
+        });
+
+        // Cookie consent banner functionality
+        function showCookieBanner() {
+            const banner = document.querySelector('.cookie-banner');
+            banner.style.display = 'block';
+        }
+
+        function hideCookieBanner() {
+            const banner = document.querySelector('.cookie-banner');
+            banner.style.display = 'none';
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'functionality_storage': 'granted',
+                'personalization_storage': 'granted'
+            });
+            hideCookieBanner();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookie_consent', 'rejected');
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'functionality_storage': 'denied',
+                'personalization_storage': 'denied'
+            });
+            hideCookieBanner();
+        }
+
+        // Show cookie banner if consent not given
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('cookie_consent')) {
+                showCookieBanner();
+            }
+        });
+    </script>
+</body>
+</html>

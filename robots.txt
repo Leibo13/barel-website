@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.your-domain.com/sitemap.xml
+
+# Disallow admin and sensitive paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
