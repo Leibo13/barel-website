@@ -71,7 +71,7 @@
         /* Accessibility Widget */
         .accessibility-widget {
             position: fixed;
-            bottom: 20px;
+            bottom: 85px;
             right: 20px;
             background: var(--metal-black);
             border: 1px solid var(--silver);
@@ -83,6 +83,8 @@
             direction: rtl;
             min-width: 280px;
             transform: translateZ(0);
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
         }
 
         .accessibility-toggle {
