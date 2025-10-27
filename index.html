@@ -38,21 +38,23 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
-        // Set default consent state
+        // Initialize consent mode with all storage types denied by default
         gtag('consent', 'default', {
             'ad_storage': 'denied',
             'analytics_storage': 'denied',
             'functionality_storage': 'denied',
             'personalization_storage': 'denied',
-            'security_storage': 'granted'
+            'security_storage': 'denied'  // Only enable after consent
         });
 
-        // Initialize GA4
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXX', {
-            'anonymize_ip': true,
-            'send_page_view': false
-        });
+        // Only initialize GA4 if consent was previously given
+        if (localStorage.getItem('cookie_consent') === 'accepted') {
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXX', {
+                'anonymize_ip': true,
+                'send_page_view': false
+            });
+        }
     </script>
     <!-- Calendly widget styles (for popup modal) -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -3175,22 +3177,50 @@
 
         function acceptCookies() {
             localStorage.setItem('cookie_consent', 'accepted');
+            
+            // Update consent state
             gtag('consent', 'update', {
+                'ad_storage': 'granted',
                 'analytics_storage': 'granted',
                 'functionality_storage': 'granted',
-                'personalization_storage': 'granted'
+                'personalization_storage': 'granted',
+                'security_storage': 'granted'
             });
+            
+            // Initialize GA4 after consent is granted
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXX', {
+                'anonymize_ip': true,
+                'send_page_view': true
+            });
+
             hideCookieBanner();
         }
 
         function rejectCookies() {
             localStorage.setItem('cookie_consent', 'rejected');
+            
+            // Update consent state
             gtag('consent', 'update', {
+                'ad_storage': 'denied',
                 'analytics_storage': 'denied',
                 'functionality_storage': 'denied',
-                'personalization_storage': 'denied'
+                'personalization_storage': 'denied',
+                'security_storage': 'denied'
             });
+
+            // Clear existing cookies
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const eqPos = cookie.indexOf('=');
+                const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+            }
+
             hideCookieBanner();
+            
+            // Reload page to ensure clean state
+            location.reload();
         }
 
         // Show cookie banner if consent not given
