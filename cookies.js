@@ -1,35 +1,38 @@
-// Consent Mode v2 Setup
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-    dataLayer.push(arguments);
-}
+// =====================
+// Safe Cookie Consent Script
+// =====================
 
-gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'functionality_storage': 'denied',
-    'security_storage': 'granted',
-    'personalization_storage': 'denied',
-    'wait_for_update': 500
-});
-
+// בדיקה אם המשתמש כבר נתן הסכמה
 document.addEventListener('DOMContentLoaded', function() {
-    if (!localStorage.getItem('cookie_consent')) {
+    const consent = localStorage.getItem('cookie_consent');
+
+    if (!consent) {
         showCookieBanner();
-    } else if (localStorage.getItem('cookie_consent') === 'accepted') {
-        enableGoogleAnalytics();
+    } else if (consent === 'accepted') {
+        enableExternalScripts();
     }
 });
 
+// =====================
+// Banner Functions
+// =====================
 function showCookieBanner() {
     const banner = document.querySelector('.cookie-banner');
-    banner.style.display = 'block';
+    if (banner) banner.style.display = 'block';
 }
 
+function hideCookieBanner() {
+    const banner = document.querySelector('.cookie-banner');
+    if (banner) banner.style.display = 'none';
+}
+
+// =====================
+// User Actions
+// =====================
 function acceptCookies() {
     localStorage.setItem('cookie_consent', 'accepted');
-    enableGoogleAnalytics();
     hideCookieBanner();
+    enableExternalScripts();
 }
 
 function rejectCookies() {
@@ -37,19 +40,39 @@ function rejectCookies() {
     hideCookieBanner();
 }
 
-function hideCookieBanner() {
-    const banner = document.querySelector('.cookie-banner');
-    banner.style.display = 'none';
+// =====================
+// Load External Scripts Safely
+// =====================
+function enableExternalScripts() {
+    // דוגמה: טעינת Google Analytics רק לאחר הסכמה
+    const gaScript = document.createElement('script');
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // החלף ב‑ID שלך
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // החלף ב‑ID שלך
+
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted',
+            'security_storage': 'granted'
+        });
+    };
+
+    // כאן ניתן להוסיף כל סקריפט צד שלישי נוסף (Pixel, Ads וכו.)
+    // רק כאן – אחרי שהמשתמש אישר
 }
 
-function enableGoogleAnalytics() {
-    gtag('consent', 'update', {
-        'analytics_storage': 'granted',
-        'functionality_storage': 'granted',
-        'personalization_storage': 'granted'
-    });
-    
-    // Initialize GA4 (replace with your measurement ID)
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 measurement ID
-}
+// =====================
+// Protect Your Cookies
+// =====================
+// בדוק שהעוגיות באתר מוגדרות עם SameSite=Strict ו-Secure:
+// document.cookie = "name=value; SameSite=Strict; Secure; path=/";
