@@ -57,6 +57,17 @@
     <!-- Calendly widget styles (for popup modal) -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
+        /* Hide scrollbar but keep functionality */
+        html {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         /* Accessibility Widget */
         .accessibility-widget {
             position: fixed;
@@ -343,6 +354,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
+        html {
+            overflow-y: hidden;
+            width: 100%;
+        }
 
         :root {
             --metal-black: #0E0E0E;
@@ -352,13 +368,32 @@
             --iron-blue: #3A4F7A;
         }
 
-        html, body {
+        html {
             height: 100%;
             font-family: 'Assistant', sans-serif;
             background-color: var(--metal-black);
             color: var(--white);
             line-height: 1.6;
             scroll-behavior: smooth;
+            overflow-y: hidden !important;
+            position: relative;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 100%;
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--metal-black);
+            color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden !important;
+            position: relative;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -367,7 +402,8 @@
             padding: 0 20px;
             width: 100%;
             box-sizing: border-box;
-            overflow-x: hidden;
+            overflow-y: hidden !important;
+            position: relative;
         }
 
         .section-container {
@@ -1055,6 +1091,8 @@
             will-change: transform;
             transform-origin: center center;
             animation: premiumFloat 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
         }
 
         @keyframes premiumFloat {
