@@ -1145,9 +1145,11 @@
 
         /* Premium section separators: subtle gold divider between sections */
         /* Ensure sections are positioned so pseudo-elements are placed correctly */
-        section { position: relative; }
+        section { 
+            position: relative; 
+        }
 
-        section:not(:last-of-type)::after {
+        section::after {
             content: '';
             position: absolute;
             left: 50%;
@@ -1161,7 +1163,7 @@
         }
 
         /* Decorative gold node centered on the divider for a premium touch */
-        section:not(:last-of-type)::before {
+        section::before {
             content: '';
             position: absolute;
             left: 50%;
